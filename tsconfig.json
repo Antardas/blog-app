@@ -38,5 +38,5 @@
 		"skipLibCheck": true,
 		"esModuleInterop": true
 	},
-	"include": ["src/**/*", "prisma/**/*"]
+	"include": ["src/**/*", "types"]
 }
