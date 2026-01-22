@@ -1,5 +1,5 @@
 import type { NextFunction, Request, Response } from 'express';
-import type { UserRole } from '../lib/auth';
+import type { UserRole } from '../types/user';
 import { auth as betterAuth } from '../lib/auth';
 
 const auth = (...roles: UserRole[]) => {
@@ -40,7 +40,7 @@ const auth = (...roles: UserRole[]) => {
 
 			next();
 		} catch (err) {
-			next(err); // move to error middleware
+			next(err); // request passed to error middleware
 		}
 	};
 };
