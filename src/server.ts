@@ -1,12 +1,14 @@
 import app from './app';
+import { config } from './config';
 import { prisma } from './lib/prisma';
 
 const main = async () => {
 	try {
 		await prisma.$connect();
-		app.listen(3000, () => {
-			console.log('Server is running on port 3000');
+		app.listen(config.port, () => {
+			console.log('Server is running on port: ', config.port);
 		});
+		
 	} catch (error) {
 		if (error instanceof Error) {
 			console.error(`A error occurred: ${error.message}`);
