@@ -48,3 +48,8 @@ export const auth = betterAuth({
 		},
 	},
 });
+
+export enum UserRole {
+	USER = 'USER',
+	ADMIN = 'ADMIN',
+}
